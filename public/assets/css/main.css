@@ -2706,7 +2706,7 @@ input, select, textarea {
 
 	#header {
 		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("/src/images/header_bg.jpg");
 		background-position: bottom center,					top left,				center center;
 		background-repeat: repeat-x,						repeat,					no-repeat;
 		background-size: 3200px 460px,					auto,					cover;
@@ -2784,12 +2784,14 @@ input, select, textarea {
 		#header h1 {
 			font-size: 2.5em;
 			margin: 0;
+			filter: drop-shadow(-2px 2px 5px rgba(0, 0, 0, 0.548));
 		}
 
 		#header p {
 			font-size: 1.5em;
 			line-height: 1.5em;
 			margin: 0.25em 0 0 0;
+			filter: drop-shadow(-2px 2px 5px rgba(0, 0, 0, 0.548));
 		}
 
 /* Footer */
@@ -3022,7 +3024,7 @@ input, select, textarea {
 
 			#header {
 				background-attachment: scroll,							scroll,							scroll;
-				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("/src/images/header_bg.jpg");
 				background-size: 1600px 230px,					auto,							cover;
 				padding: 6em 0 12em 0;
 			}
@@ -3174,7 +3176,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("/src/images/header_bg.jpg");
 				background-size: 1280px 184px,						auto,							cover;
 				padding: 3em 0 7em 0;
 			}
@@ -3299,4 +3301,26 @@ input, select, textarea {
 					display: none;
 				}
 
+	}
+
+	img.profile-photo{
+		width: 350px;
+		border-radius: 50%;
+		filter: drop-shadow(0 0 0.2rem black);
+	}
+	
+	.skills-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: flex-end;
+		/* border: 1px solid black; */
+	}
+
+	.skill-icon{
+		/* border: 1px solid black; */
+		padding: 15px;
+	}
+	.skill-icon.rails{
+		width: 158px;
 	}
