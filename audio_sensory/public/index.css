@@ -47,9 +47,7 @@ body{
   }
 
   .visual-container{
-    /* display: flex; */
-    /* height: 75%;
-    width: 50%; */
+    display: flex;
     margin-top: 3rem;
   }
 

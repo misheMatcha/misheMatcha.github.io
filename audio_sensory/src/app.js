@@ -17,7 +17,7 @@ window.onload = function(){
   }
   
   function audioSetup(){
-    audio = new Audio("aeriths_theme.mp3")
+    audio = new Audio("/audio_sensory/src/aeriths_theme.mp3")
     audioCtx = audioCtx || new AudioContext();
     analyser = analyser || audioCtx.createAnalyser();
     source = audioCtx.createMediaElementSource(audio);
@@ -92,10 +92,10 @@ window.onload = function(){
     canvasCtx.lineWidth = 1;
     canvasCtx.stroke()
   }
-
-  document.getElementsByClassName("player-container")[0].addEventListener("click", init());
-  document.getElementsByClassName("play-btn")[0].addEventListener("click", handlePlay);
-  document.getElementsByClassName("pause-btn")[0].addEventListener("click", handlePause);
-  document.getElementsByClassName("vol-up-btn")[0].addEventListener("click", volumeUp);
-  document.getElementsByClassName("vol-down-btn")[0].addEventListener("click", volumeDown);
+  
+  document.getElementsByClassName("player-controls")[0].addEventListener("click", init());
+  document.getElementsByClassName("play-button")[0].addEventListener("click", handlePlay);
+  document.getElementsByClassName("pause-button")[0].addEventListener("click", handlePause);
+  document.getElementsByClassName("vol-up-button")[0].addEventListener("click", volumeUp);
+  document.getElementsByClassName("vol-down-button")[0].addEventListener("click", volumeDown);
 }
