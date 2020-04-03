@@ -1,2 +1,0 @@
-# audio_vizsualizer
- 

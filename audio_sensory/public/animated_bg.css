@@ -1,0 +1,101 @@
+.animated-bg{
+  position: absolute;
+  width: .001vmin;
+  height: .001vmin;
+  border-radius: 5rem;
+  z-index: -1;
+  overflow: hidden;
+}
+
+  .animated-bg.one{
+    box-shadow: 0 0 45vmax 45vmax rgba(227, 94, 57, 0.776);
+    animation: move1 30s linear 0s infinite, hue 10s linear 0s infinite;
+  }
+
+  .animated-bg.two{
+    box-shadow: 0 0 45vmax 45vmax rgb(210, 228, 143);
+    animation: move2 20s linear 0s infinite, hue 15s linear 0s infinite;
+  }
+
+  .animated-bg.three{
+    box-shadow: 0 0 45vmax 45vmax rgb(150, 114, 191);
+    animation: move3 25s linear 0s infinite, hue 20s linear 0s infinite;
+  }
+
+@keyframes hue{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  25%{
+    filter: hue-rotate(45deg);
+  }
+  50%{
+    filter: hue-rotate(90deg);
+  }
+  750%{
+    filter: hue-rotate(45deg);
+  }
+  100%{
+    filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes move1{
+  0%{
+    top: 0vh;
+    left: 50vw;
+  }
+  25%{
+    left: 0vw;
+  }
+  50%{
+    top: 100vh;
+  }
+  75%{
+    left: 100vw;
+  }
+  100%{
+    top: 0vh;
+    left: 50vw;
+  }
+}
+
+@keyframes move2{
+  0%{
+    top: 50vh;
+    left: 100vw;
+  }
+  25%{
+    top: 100vh;
+  }
+  50%{
+    left: 0vw;
+  }
+  75%{
+    top: 0vh;
+  }
+  100%{
+    top: 50vh;
+    left: 100vw;
+  }
+}
+
+@keyframes move3{
+  0%{
+    top: 100vh;
+    left: 50vw;
+  }
+  25%{
+    left: 100vw;
+  }
+  50%{
+    top: 0vh;
+  }
+  75%{
+    left: 0vw;
+  }
+  100%{
+    top: 100vh;
+    left: 50vw;
+  }
+}
