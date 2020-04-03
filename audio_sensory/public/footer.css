@@ -1,0 +1,22 @@
+.footer-nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 2.5rem;
+  color: white;
+  filter: drop-shadow(.35rem .35rem 0.35rem black);
+}
+
+  .footer-nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75%;
+    padding: 1rem;
+  }
+
+  .footer-nav-links:hover{
+    color: white;
+    filter: drop-shadow(.25rem .25rem 0.25rem black);
+    transition: .2s;
+  }
