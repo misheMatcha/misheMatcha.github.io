@@ -13,13 +13,27 @@
 
 <body>
   <div class="main-container">
-    <div class="player-container">
-      <p class="play-btn"><i class="fas fa-play"></i></p>
-      <p class="pause-btn"><i class="fas fa-stop"></i></p>
-      <p class="vol-up-btn">Volume Up</p>
-      <p class="vol-down-btn">Volume Down</p>
+    <div class="animated-bg one"></div>
+    <div class="animated-bg two"></div>
+    <div class="animated-bg three"></div>
+    <div class="description">
+      <p>
+        Audio Sensory is a an audio visualizer built utilizing Web Audio API and canvas to create visuals.
+      </p>
+      <!--
+          Future additions
+            - add oscillator
+            - add toggle between osc and circles
+            - add differnt colors for low, mid, high frequencies
+         -->
     </div>
-    <div class="visualizer">
+    <div class="player-controls">
+      <p class="play-button"><i class="play-cont far fa-play-circle"></i></p>
+      <p class="pause-button"><i class="play-cont fas fa-stop-circle"></i></p>
+      <p class="vol-down-button"><i class="play-cont fas fa-volume-down"></i></p>
+      <p class="vol-up-button"><i class="play-cont fas fa-volume-up"></i></p>
+    </div>
+    <div class="visual-container">
       <canvas id="canvas"></canvas>
     </div>
   </div>
