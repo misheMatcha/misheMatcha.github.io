@@ -3326,3 +3326,7 @@ input, select, textarea {
 	.skill-icon.rails{
 		width: 158px;
 	}
+
+	.audio-sensory{
+		opacity: 75%;
+	}
