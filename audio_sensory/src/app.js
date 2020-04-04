@@ -1,12 +1,4 @@
 window.onload = function(){
-  // Modal - forces user gesture to create audio context
- 
-  // window.onclick = function(e){
-  //   if(e.target === modal){
-  //     modal.style.display = "none";
-  //   }
-  // }
-
   // Audio
   var analyser,
       audio,
@@ -109,13 +101,14 @@ window.onload = function(){
     canvasCtx.stroke()
   }
 
-  // document.getElementsByClassName("player-controls")[0].addEventListener("click", init());
+  // Modal
   var modal = document.getElementById("modal-wrap");
   var modalButton = document.getElementById("modal-button");
   modalButton.onclick = function () {
     modal.style.display = "none";
     init();
   }
+  
   document.getElementsByClassName("play-button")[0].addEventListener("click", handlePlay);
   document.getElementsByClassName("pause-button")[0].addEventListener("click", handlePause);
   document.getElementsByClassName("vol-up-button")[0].addEventListener("click", volumeUp);
