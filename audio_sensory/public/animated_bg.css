@@ -1,25 +1,25 @@
 .animated-bg{
   position: absolute;
-  width: .001vmin;
-  height: .001vmin;
-  border-radius: 5rem;
+  width: .01vmin;
+  height: .01vmin;
+  border-radius: 10rem;
   z-index: -1;
   overflow: hidden;
 }
 
   .animated-bg.one{
     box-shadow: 0 0 45vmax 45vmax rgba(227, 94, 57, 0.776);
-    animation: move1 30s linear 0s infinite, hue 10s linear 0s infinite;
+    animation: move1 15s linear 0s infinite, hue 7s linear 0s infinite;
   }
 
   .animated-bg.two{
     box-shadow: 0 0 45vmax 45vmax rgb(210, 228, 143);
-    animation: move2 20s linear 0s infinite, hue 15s linear 0s infinite;
+    animation: move2 7s linear 0s infinite, hue 5s linear 0s infinite;
   }
 
   .animated-bg.three{
     box-shadow: 0 0 45vmax 45vmax rgb(150, 114, 191);
-    animation: move3 25s linear 0s infinite, hue 20s linear 0s infinite;
+    animation: move3 13s linear 0s infinite, hue 9s linear 0s infinite;
   }
 
 @keyframes hue{

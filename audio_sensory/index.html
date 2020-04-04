@@ -7,28 +7,33 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
     integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/audio_sensory/public/reset.css">
+  <link rel="stylesheet" type="text/css" href="/audio_sensory/public/animated_bg.css">
+  <link rel="stylesheet" type="text/css" href="/audio_sensory/public/modal.css">
   <link rel="stylesheet" type="text/css" href="/audio_sensory/public/index.css">
   <link rel="stylesheet" type="text/css" href="/audio_sensory/public/footer.css">
-  <link rel="stylesheet" type="text/css" href="/audio_sensory/public/animated_bg.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <script type="application/javascript" src="/audio_sensory/src/app.js"></script>
 </head>
 
 <body>
   <div class="main-container">
+    <!-- Background animation -->
     <div class="animated-bg one"></div>
     <div class="animated-bg two"></div>
     <div class="animated-bg three"></div>
-    <div class="description">
-      <p>
-        Audio Sensory is a an audio visualizer built utilizing Web Audio API and canvas to create visuals.
-      </p>
-      <!--
-          Future additions
-            - add oscillator
-            - add toggle between osc and circles
-            - add differnt colors for low, mid, high frequencies
-         -->
+    <!-- Modal -->
+    <div id="modal-wrap" class="modal">
+      <div class="modal-content">
+        <p>Welcome to audio sensory. Inspired by my affection for music and fondess for art. I hope this bridges the gap between the two.</p>
+        <p>Please enjoy.</p>
+        <button id="modal-button" class="fas fa-window-close"></button>
+      </div>
     </div>
+    <div class="description">
+      <p>Audio Sensory was built utilizing Web Audio API to obtain audio data and canvas to display visuals.</p>
+      <p>Use the controls below to start the visuals and enjoy.</p>
+    </div>
+    <!-- Player -->
     <div class="player-controls">
       <p class="play-button"><i class="play-cont far fa-play-circle"></i></p>
       <p class="pause-button"><i class="play-cont fas fa-stop-circle"></i></p>
@@ -45,10 +50,9 @@
   <div class="footer-nav">
     <ul>
       <li><a href="http://michellevong.com" target="blank" class="footer-nav-links">Portfolio</a></li>
-      <li><a href="https://www.linkedin.com/in/mishevong" target="blank"
-          class="footer-nav-links fab fa-linkedin-in"></a></li>
+      <li><a href="https://www.linkedin.com/in/mishevong" target="blank" class="footer-nav-links fab fa-linkedin-in"></a></li>
       <li><a href="https://github.com/misheMatcha" target="blank" class="footer-nav-links fab fa-github-alt"></a></li>
-      <li><a href="mailto:mishe.vong@gmail.com" target="blank" class="footer-nav-links far fa-envelope"></a></li>
+      <li><a href="mailto:mishe.vong@gmail.com?subject=Reaching%20out%20from%20audio%20sensory" target="blank" class="footer-nav-links far fa-envelope"></a></li>
     </ul>
   </div>
 </footer>
