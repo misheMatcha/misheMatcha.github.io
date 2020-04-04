@@ -1,4 +1,13 @@
 window.onload = function(){
+  // Modal - forces user gesture to create audio context
+ 
+  // window.onclick = function(e){
+  //   if(e.target === modal){
+  //     modal.style.display = "none";
+  //   }
+  // }
+
+  // Audio
   var analyser,
       audio,
       audioCtx,
@@ -37,13 +46,23 @@ window.onload = function(){
     dataArray = new Uint8Array(buffer);
   }
 
-  // player functionality
+  // Player functionality
   function handlePlay(){
+    if(audioCtx.state === 'suspended'){
+      audioCtx.resume().then(() => {
+        console.log('resume context')
+      })
+    }
     audio.play();
     visualizer();
   }
 
   function handlePause(){
+    if(audioCtx.state === 'running'){
+      audioCtx.suspend().then(() => {
+        console.log('suspend context')
+      })
+    }
     audio.pause();
   }
 
@@ -68,19 +87,16 @@ window.onload = function(){
       freq = dataArray[i];
       var canX = canvas.width/2;
       var canY = canvas.height/2;
-      if(count <= 450){
+      if(count <= 500){
         if(i % 2 === 0){
-          drawVisuals(freq + 3, canX, canY, count += 20, "blue")
-          drawVisuals(freq + 3, canX, canY, count += 20, "indigo")
-          drawVisuals(freq + 3, canX, canY, count += 20, "violet")
-          drawVisuals(freq, canX, canY, count += 20, "red")
-        }
-      }else{
-        drawVisuals(freq, canX, canY, count += 20, "orange")
-        drawVisuals(freq, canX, canY, count += 20, "yellow")
-        drawVisuals(freq, canX, canY, count += 20, "green")
-      }
+          drawVisuals(freq + 11, canX, canY, count += 10, "white")
+          drawVisuals(freq + 13, canX, canY, count += 13, "yellow")
+        }else{
+          drawVisuals(freq + 12, canX, canY, count += 10, "orange")
+          drawVisuals(freq + 15, canX, canY, count += 5, "purple")
 
+        }
+      }
     }
     requestAnimationFrame(visualizer);
   }
@@ -92,8 +108,14 @@ window.onload = function(){
     canvasCtx.lineWidth = 1;
     canvasCtx.stroke()
   }
-  
-  document.getElementsByClassName("player-controls")[0].addEventListener("click", init());
+
+  // document.getElementsByClassName("player-controls")[0].addEventListener("click", init());
+  var modal = document.getElementById("modal-wrap");
+  var modalButton = document.getElementById("modal-button");
+  modalButton.onclick = function () {
+    modal.style.display = "none";
+    init();
+  }
   document.getElementsByClassName("play-button")[0].addEventListener("click", handlePlay);
   document.getElementsByClassName("pause-button")[0].addEventListener("click", handlePause);
   document.getElementsByClassName("vol-up-button")[0].addEventListener("click", volumeUp);
