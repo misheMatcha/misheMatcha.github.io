@@ -2179,7 +2179,8 @@ input, select, textarea {
 			-webkit-transition: opacity 0.25s ease-in-out;
 			-ms-transition: opacity 0.25s ease-in-out;
 			transition: opacity 0.25s ease-in-out;
-			background-image: url("images/overlay.png");
+			/* background-image: url("images/overlay.png"); */
+			background-color: gray;
 			content: '';
 			display: block;
 			height: 100%;
@@ -2225,7 +2226,7 @@ input, select, textarea {
 				-webkit-transition: -webkit-transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
 				-ms-transition: -ms-transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
 				transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-				color: #fff;
+				color: #f3ed46;
 				font-size: 6em;
 				height: 1em;
 				left: 50%;
@@ -2246,7 +2247,7 @@ input, select, textarea {
 			}
 
 			.image.icon:hover:after {
-				opacity: 1;
+				opacity: 0;
 			}
 
 	span.image.icon {
